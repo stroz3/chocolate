@@ -1,0 +1,68 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+
+
+<div class="writeAbout" id="comment">
+    <div class="container">
+        <div class="writeAbout__title">
+            О нас пишут
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/Отзыв1.svg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/Отзыв2.svg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/Отзыв3.svg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/Отзыв4.svg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/Отзыв1.svg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/Отзыв2.svg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/Отзыв3.svg" alt="">
+              </div>
+            </div>
+            <div class="swiper-button-next">
+                <img src="img/buttonPrev.svg" alt="">
+            </div>
+            <div class="swiper-button-prev">
+                <img src="img/buttonPrev.svg" alt="">
+            </div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
+    
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      freeMode: true,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: false,
+        dragSize: 20,
+      },
+    });
+  </script>
