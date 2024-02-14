@@ -15,6 +15,11 @@ const splide = new Splide( '#portfolio', {
     speed: 1,
     pauseOnHover: false,
   },
+  breakpoints:{
+    768:{
+      height: 271
+    }
+  }
 } );
 
 const splide2 = new Splide( '#portfolio2', {
@@ -28,6 +33,11 @@ const splide2 = new Splide( '#portfolio2', {
       speed: -1,
       pauseOnHover: false,
     },
+    breakpoints:{
+      768:{
+        height: 271
+      }
+    }
   } );
 
 splide.mount({AutoScroll});
@@ -40,6 +50,18 @@ const video = new Splide( '#ourVideo', {
     drag: 'free',
     perPage: 5,
     gap: 20,
+    breakpoints:{
+      1000:{
+        perPage: 3
+      },
+      768:{
+        perPage: 2
+      },
+      480:{
+        gap: 10,
+        height: 259
+      }
+    },
     classes: {
 		arrows: 'splide__arrows your-class-arrows',
 		arrow : 'splide__arrow your-class-arrow',
@@ -72,6 +94,14 @@ const videoHeader = new Splide( '#videoHeader', {
 height: 750,
 cover: true,
 type: "loop",
+breakpoints: {
+  1300:{
+    height: 528
+  },
+  768:{
+    height:550
+  }
+},
 video: {
     loop: true,
     disable: true
@@ -80,10 +110,14 @@ classes: {
     next  : 'next-btn',
 },
 } );
-first.addEventListener("click", ()=>{
+document.querySelector("#btnPlay").addEventListener("click", ()=>{
     videoHeader.Components.Video.play();
+    document.querySelector('iframe').contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
 })
-secondBtn.addEventListener("click", ()=>{
+first.addEventListener("click", ()=>{
+    document.querySelector( 'iframe').contentWindow.postMessage(JSON.stringify({ event: 'command', func: 'stopVideo' }), '*');
+})
+second.addEventListener("click", ()=>{
     videoHeader.Components.Video.pause();
 })
 third.addEventListener("click", ()=>{

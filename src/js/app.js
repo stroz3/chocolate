@@ -3,6 +3,8 @@ import "./modules/splide.js";
 import {videoHeader} from './modules/splide.js';
 Ivanfunctions.isWebp()
 
+const burgerBtn = document.getElementById('burger');
+const html = document.querySelector('html');
 
 setInterval(function() {
     var icons = document.querySelectorAll('#animated-icon');
@@ -78,6 +80,7 @@ function close(){
 }
 
 btn.addEventListener('click', (e) => {
+
   if (flag) {
     fadeOut(btn, 300);
     fadeIn(btnThree, 300, "block");
@@ -105,11 +108,13 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
 
       const targetElement = document.querySelector(this.getAttribute('href'));
-      
+      burgerBtn.classList.remove('_active');
+      headerMenu.classList.remove("_active");
+      html.style.overflowY = "auto";
       if (targetElement) {
         const offset = targetElement.getBoundingClientRect().top + window.scrollY;
         window.scrollTo({
-          top: offset - 100,
+          top: offset,
           behavior: 'smooth'
         });
       }
@@ -117,3 +122,17 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
+
+  
+  burgerBtn.addEventListener('click', function () {
+    
+    this.classList.toggle('_active');
+    headerMenu.classList.toggle('_active');
+    if(this.classList.contains('_active')){
+      html.style.overflowY = "hidden";
+    }
+    else{
+      html.style.overflowY = "auto";
+    }
+  });
