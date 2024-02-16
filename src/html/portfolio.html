@@ -34,3 +34,44 @@
     </div>
 </div>
 
+
+<script>
+    const splide = new Splide( '#portfolio', {
+        type: 'loop',
+        drag: 'free',
+        perPage: 2,
+        gap: 20,
+        height:"400px",
+        autoWidth: true,
+        autoScroll: {
+            speed: 1,
+            pauseOnHover: false,
+        },
+        breakpoints:{
+            768:{
+            height: 271
+            }
+        }
+        } );
+
+        const splide2 = new Splide( '#portfolio2', {
+            type: 'loop',
+            drag: 'free',
+            perPage: 2,
+            gap: 20,
+            autoWidth: true,
+            height:"400px",
+            autoScroll: {
+            speed: -1,
+            pauseOnHover: false,
+            },
+            breakpoints:{
+            768:{
+                height: 271
+            }
+            }
+        } );
+
+        splide.mount({AutoScroll});
+        splide2.mount({AutoScroll});
+</script>

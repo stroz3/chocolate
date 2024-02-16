@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20240216145003">
+    <link rel="stylesheet" href="css/style.min.css?_v=20240216190336">
     <title>Главная</title>
 </head>
 
@@ -13,7 +13,7 @@
     <div class="container">
         <div class="header__wrapper">
             <div class="header__logo">
-                <img loading="lazy" src="img/Logo.svg" alt="">
+                <img src="img/Logo.svg" alt="">
             </div>
             <div class="header__nav " id="headerMenu">
                 <ul class="header__ul">
@@ -26,7 +26,7 @@
                 <div class="header__backblur"></div>
             </div>
             <div class="header__phone">
-                <img loading="lazy" src="img/whatsappIcon.svg" alt="">
+                <img src="img/whatsappIcon.svg" alt="">
                 <a href="tel:89425328471">8 (942) 532-84-71</a>
             </div>
             <div class="header__menu-icon" id="burger">
@@ -40,7 +40,7 @@
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=nv7FUbJQkjg">
-              <picture><source srcset="img/VideoScreen.webp" type="image/webp"><img  src="img/VideoScreen.png"></picture>
+              <picture><source srcset="img/VideoScreen.webp" type="image/webp"><img loading="eager"  src="img/VideoScreen.png"></picture>
             </li>
             <li class="splide__slide"  data-splide-youtube="https://www.youtube.com/watch?v=szeDvSf-9mI">
               <picture><source srcset="img/second.webp" type="image/webp"><img loading="lazy" src="img/second.png"></picture>
@@ -54,16 +54,16 @@
     <div class="container">
         <div class="video__wrapper">
             <div class="button-play">
-                <button id="btnPlay" class="btn btn-brown"><img loading="lazy" src="img/PlayBtn.svg" alt=""></button>
+                <button id="btnPlay" class="btn btn-brown"><img src="img/PlayBtn.svg" alt=""></button>
                 <div id="btnThree" class="buttons">
                     <button id="firstBtn" class="btn-three">
-                        <img loading="lazy" src="img/play.svg" alt="">
+                        <img src="img/play.svg" alt="">
                     </button>
                     <button id="secondBtn" class="btn-three">
-                        <img  loading="lazy" src="img/stop.svg" alt="">
+                        <img src="img/stop.svg" alt="">
                     </button>
                     <button id="thirdBtn" class="btn-three next-btn">
-                        <img loading="lazy" src="img/next.svg" alt="">
+                        <img src="img/next.svg" alt="">
                     </button>
                 </div>
             </div>
@@ -137,6 +137,46 @@
 </div>
 
 
+<script>
+    const splide = new Splide( '#portfolio', {
+        type: 'loop',
+        drag: 'free',
+        perPage: 2,
+        gap: 20,
+        height:"400px",
+        autoWidth: true,
+        autoScroll: {
+            speed: 1,
+            pauseOnHover: false,
+        },
+        breakpoints:{
+            768:{
+            height: 271
+            }
+        }
+        } );
+
+        const splide2 = new Splide( '#portfolio2', {
+            type: 'loop',
+            drag: 'free',
+            perPage: 2,
+            gap: 20,
+            autoWidth: true,
+            height:"400px",
+            autoScroll: {
+            speed: -1,
+            pauseOnHover: false,
+            },
+            breakpoints:{
+            768:{
+                height: 271
+            }
+            }
+        } );
+
+        splide.mount({AutoScroll});
+        splide2.mount({AutoScroll});
+</script>
 <div class="offers" id="offers">
     <div class="container">
         <h2 class="offers__title">Предложения</h2>
@@ -687,11 +727,11 @@
         </div>
     </div>
 </footer>
-    <script src="js/wow.min.js?_v=20240216145003"></script>
+    <script src="js/wow.min.js?_v=20240216190336"></script>
     <script defer>
     new WOW().init();
     </script>
-    <script src="js/app.min.js?_v=20240216145003" async></script>
+    <script src="js/app.min.js?_v=20240216190336" async></script>
 </body>
 
 </html>

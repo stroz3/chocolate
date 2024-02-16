@@ -313,31 +313,7 @@ body{
             margin-right: auto;
         }
     }
-    // &:nth-child(1){
-    //     animation: firstButton 1s forwards;
-    // }
-    // &:nth-child(2){
-    //     animation: secondButton 1s forwards;
-    // }
-    // &:nth-child(3){
-    //     animation: thirdButton 1s forwards;
-    //     img{
-    //         transform: translateX(-4px);
-    //     }
-    // }
-    // &:nth-child(1){
-    //     top: 0;
-    // }
-    // &:nth-child(2){
-    //     bottom: 0;
-    // }
-    // &:nth-child(3){
-    //     right: inherit;
-    //     bottom: 0;
-    //     top: 0;
-    //     margin-top: auto;
-    //     margin-bottom: auto;
-    // }
+   
 }
 .active-buttons-play{
     display: block;
@@ -439,8 +415,6 @@ body{
 }
 
 
-
-
 .video{
     position: relative;
     max-width: 100%;
@@ -461,6 +435,11 @@ body{
     left: 0;
     .splide__video__play{
         display: none;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 .button-play{
@@ -727,11 +706,7 @@ body{
         
     }
 
-    // .interesting__block-price
-
-    &__block-price {
-    }
-
+    
     // .interesting__block-price-p
 
     &__block-price-p {
@@ -745,10 +720,6 @@ body{
 
     }
 
-    // .interesting__block-buy
-
-    &__block-buy {
-    }
 
     // .interesting__block-buy-btn
 
@@ -833,9 +804,6 @@ body{
     flex-direction: column;
 }
 
-.front{
-    
-}
 
 .back {
     transform: rotateY(180deg) translateZ(0);
@@ -890,10 +858,6 @@ body{
         grid-gap: 90px;
     }
 
-    // .ours__block
-
-    &__block {
-    }
 
     // .ours__block-photo
 
@@ -1024,10 +988,7 @@ body{
         }
     }
 
-    // .footer__item-img
 
-    &__item-img {
-    }
 
     // .footer__item-text
 
@@ -1303,11 +1264,6 @@ body{
                 border-radius: 50px 50px 155px 50px !important;
             }
         }
-        // &:nth-child(3n){
-        //     img{
-        //         border-radius: 50px 50px 50px 155px !important;
-        //     }
-        // }
     }
 }
 
@@ -1559,9 +1515,8 @@ form {
 }
 
 .custom-checkbox input {
-    -webkit-appearance: none; 
+    -webkit-appearance: none;
     position: absolute; 
-                        
 }
 
 .checkbox { 
@@ -2073,27 +2028,27 @@ form {
       .portfolio__clue{
         font-size: 25px;
       }
-      .splide__slide{
-        img{
-            height: 270px;
-        }
-            &:nth-child(2n + 1){
-                img{
-                    border-radius: 40px !important;
-                }
+
+      .portfolio{
+        .splide__slide{
+            img{
+                height: 270px;
             }
-            &:nth-child(2n){
-                img{
-                    border-radius: 40px 40px 105.38px 40px !important;
-                    
+                &:nth-child(2n + 1){
+                    img{
+                        border-radius: 40px !important;
+                    }
                 }
-            }
-            // &:nth-child(3n){
-            //     img{
-            //         border-radius: 50px 50px 50px 155px !important;
-            //     }
-            // }
+                &:nth-child(2n){
+                    img{
+                        border-radius: 40px 40px 105.38px 40px !important;
+                        
+                    }
+                }
+                
+          }
       }
+      
       .portfolio{
         margin-top: 80px;
         padding: 40px 0;
