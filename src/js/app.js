@@ -1,10 +1,16 @@
 import * as Ivanfunctions from "./modules/function.js";
 import "./modules/splide.js";
 import {videoHeader} from './modules/splide.js';
+
+
 Ivanfunctions.isWebp()
+
 
 const burgerBtn = document.getElementById('burger');
 const html = document.querySelector('html');
+const openPopupBtn = document.querySelectorAll('#openPopup');
+const closePopupBtn = document.getElementById('closePopup');
+const popupContainer = document.getElementById('popupContainer');
 
 setInterval(function() {
     var icons = document.querySelectorAll('#animated-icon');
@@ -136,3 +142,26 @@ document.addEventListener('DOMContentLoaded', function () {
       html.style.overflowY = "auto";
     }
   });
+
+
+
+openPopupBtn.forEach(el=>{
+  el.addEventListener('click', function () {
+    popupContainer.style.display = 'flex';
+    html.style.overflowY = "hidden";
+  });  
+})
+
+closePopupBtn.addEventListener('click', function () {
+  popupContainer.style.display = 'none';
+  html.style.overflowY = "auto";
+});
+popupContainer.addEventListener('click', function (event) {
+  if (event.target === this) {
+    // Закрыть поп-ап только если был кликнут задний фон
+    popupContainer.style.display = 'none';
+    html.style.overflowY = "auto";
+  }
+});
+
+

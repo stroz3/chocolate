@@ -2,6 +2,8 @@
 @import "normalize";
 @import "splide-core.min";
 @import "splide-extension-video.min";
+@import "animate";
+// @import "animate";
 body{
     overflow-x: hidden;
 }
@@ -238,7 +240,22 @@ body{
         border-radius: 100%;
 }
 }
-
+.btn-popup{
+    background: rgb(255, 230, 192);
+    opacity: 1;
+    &:hover{
+        background: white;
+        &::after{
+            background-image: url("../img/circle-light.svg");
+        }  
+        img{
+            filter: none;
+        }
+    }
+    &::before{
+        border-color:rgb(255, 230, 192);
+    }
+}
 .buttons{
     position: absolute;
     right: 0;
@@ -1357,6 +1374,226 @@ body{
 .mySwiper{
     max-width: 1300px;
 }
+
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    justify-content: center;
+    overflow: auto;
+    align-items: center;
+    padding: 50px;
+}
+
+.popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 24px 0px rgba(3, 29, 28, 0.07);
+    background: rgb(171, 143, 127);
+    text-align: center;
+    position: relative;
+    width: 750px;
+    max-height: 80%;
+   
+}
+.form__block{
+    &:last-child{
+        img{
+            width: 300px;
+        }
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    &::before, &::after{
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 6px;
+        background-color: #fff;
+        border-radius: 36px;
+        background: rgb(107, 99, 92);
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    &::after{
+        transform: rotate(45deg);
+    }
+    &::before{
+        transform: rotate(-45deg);
+    }
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    align-items: start;
+}
+.form__photo{
+        width: 316px;
+}
+.form__arrow{
+    position: absolute;
+    bottom: 40px;
+    right: 316px;
+}
+.form-group {
+    position: relative;
+    margin-bottom: 30px;
+    width: 75%;
+  }
+.form__button{
+    position: absolute;
+    bottom: -90px;
+    right: 100px;
+}
+.input-label {
+    width: 100%;
+    padding: 10px 0 5px;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    color: white;
+}
+.input-label:-webkit-autofill,
+.input-label:-webkit-autofill:hover,
+.input-label:-webkit-autofill:focus {
+    border: none;
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px rgb(171, 143, 127) inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+#cat {
+    position: absolute;
+    top: 30%;
+    left: 5px;
+    transform: translateY(0);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 17px;
+    font-weight: 200;
+    line-height: 21px;
+    text-align: left;
+    pointer-events: none;
+    transition: transform 0.3s, font-size 0.3s;
+}
+    
+.input-label:focus ~ #cat,
+.input-label:not(:placeholder-shown) ~ #cat {
+  transform: translateY(-30px);
+}
+
+.bottom-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+}
+.popup__title{
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    width: 400px;
+}
+.custom-checkbox { 
+    display: flex;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    p{
+        margin-bottom: 0;
+        width: 70%;
+    }
+    a{
+        color: black;
+        // border-bottom: 1px solid black;
+        text-decoration: underline black;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+.custom-checkbox .checkbox {
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-checkbox input {
+    -webkit-appearance: none; 
+    position: absolute; 
+                        
+}
+
+.checkbox { 
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 7px;
+    img{
+        opacity: 0;
+        width: 16px;
+        height: 11px;
+    }
+}
+
+.checkmark { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    
+    height: auto;
+    display: none; 
+}
+
+.custom-checkbox input:checked ~ .checkbox .checkmark {
+    display: block;
+    
+}
+
+.custom-checkbox input:checked ~ .checkbox {
+    background: white;
+    img{
+        width: 80%;
+        height: 80%;
+        opacity: 1;
+    }
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @media (max-width: 1300px)  {
     .header__nav{
         position: fixed;
@@ -1917,6 +2154,52 @@ body{
     .footer {
         margin-top: 310px;
     }
+    form{
+        flex-direction: column;
+    }
+    .popup{
+        width: 440px;
+        padding-bottom: 80px;
+        border-radius: 25px;
+    }
+    .form__photo {
+        width: 231px;
+    }
+    .form__button{
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        bottom: -55px;
+    }
+    .form-group{
+        width: 100%;
+    }
+    .custom-checkbox p{
+        width: 100%;
+
+    }
+    .form__block{
+        &:last-child{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        width: 100%;
+    }
+    .form__arrow{
+        bottom: 0px;
+        width: 82px;
+        right: 316px;
+        height: 129px;
+        transform: rotate(-40deg);
+    
+    }
+    .checkbox{
+        width: 35px;
+    height: 33px;
+    }
 }
 @media (max-width: 575px) {
     .about__title, .offers__title, .interesting__title-h2, .ourVideos__title, .why__title, .ours__title, .writeAbout__title, .qnA__title, .call__title{
@@ -1984,9 +2267,23 @@ body{
         width: 110px;
         left: 20px;
     }
+    .popup{
+        width: 320px;
+    }
+    form{
+        margin-top: 0;
+    }
+    .popup__title{
+        width: 200px;
+    }
+    .form__arrow{
+        width: 50px;
+        right: 248px;
+    }
 }
 @media (max-width: 360px) {
     .container{
         padding: 0 20px;
     }
+    
 }
