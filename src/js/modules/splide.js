@@ -73,16 +73,7 @@ const video = new Splide( '#ourVideo', {
     },
 });
 
-//   var bar    = video.root.querySelector( '.my-slider-progress-bar' );
-//   // Updates the bar width whenever the carousel moves:
-//   video.on( 'mounted move', function () {
-//     var end  = 10;
-//     console.log(video);
-//     var rate = Math.min( ( video.index + 1) / end, 5 );
-//     console.log(rate);
-//     bar.style.left = String( rate * 100  ) + '%';
-//   } );
-  
+
   video.mount( {Video});
 
 let first = document.getElementById("firstBtn");
@@ -123,6 +114,5 @@ second.addEventListener("click", ()=>{
 third.addEventListener("click", ()=>{
     videoHeader.go('>');
 })
-console.log();
 
 videoHeader.mount({Video});

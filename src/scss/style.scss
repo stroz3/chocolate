@@ -3,6 +3,7 @@
 @import "splide-core.min";
 @import "splide-extension-video.min";
 @import "animate";
+@import "swiper-bundle";
 // @import "animate";
 body{
     overflow-x: hidden;
@@ -638,8 +639,7 @@ body{
     margin-top: 50px;
     // .interesting__title
 
-    &__title {
-    }
+
 
     // .interesting__title-h2
 
@@ -961,6 +961,7 @@ body{
 
 		&__button {
             margin-top: 64px;
+            z-index: 9;
 		}
 
         &__arrow{

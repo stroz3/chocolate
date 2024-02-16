@@ -1,7 +1,7 @@
 import * as Ivanfunctions from "./modules/function.js";
 import "./modules/splide.js";
 import {videoHeader} from './modules/splide.js';
-
+import "./modules/swiperMod.js"
 
 Ivanfunctions.isWebp()
 
@@ -68,7 +68,6 @@ let btn = document.getElementById("btnPlay");
 let btnThree = document.getElementById("btnThree");
 let flag = true;
 
-var id = null;
 
 let first = document.getElementById("firstBtn");
 let second = document.getElementById("secondBtn");
@@ -158,7 +157,6 @@ closePopupBtn.addEventListener('click', function () {
 });
 popupContainer.addEventListener('click', function (event) {
   if (event.target === this) {
-    // Закрыть поп-ап только если был кликнут задний фон
     popupContainer.style.display = 'none';
     html.style.overflowY = "auto";
   }
