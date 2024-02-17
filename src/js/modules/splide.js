@@ -1,10 +1,47 @@
 import { Splide } from '@splidejs/splide';
-import { Video } from '@splidejs/splide-extension-video';
 
+import { Video } from '@splidejs/splide-extension-video';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
 
+const splide = new Splide( '#portfolio', {
+  type: 'loop',
+  drag: 'free',
+  perPage: 2,
+  gap: 20,
+  height:"400px",
+  autoWidth: true,
+  autoScroll: {
+      speed: 1,
+      pauseOnHover: false,
+  },
+  breakpoints:{
+      768:{
+      height: 271
+      }
+  }
+  } );
 
+  const splide2 = new Splide( '#portfolio2', {
+      type: 'loop',
+      drag: 'free',
+      perPage: 2,
+      gap: 20,
+      autoWidth: true,
+      height:"400px",
+      autoScroll: {
+      speed: -1,
+      pauseOnHover: false,
+      },
+      breakpoints:{
+      768:{
+          height: 271
+      }
+      }
+  } );
+
+  splide.mount({AutoScroll});
+  splide2.mount({AutoScroll});
 
 const video = new Splide( '#ourVideo', {
     type: 'loop',
@@ -66,12 +103,15 @@ classes: {
 } );
 document.querySelector("#btnPlay").addEventListener("click", ()=>{
     videoHeader.Components.Video.play();
-    document.querySelector('iframe').contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+    // if(document.querySelector('iframe') != undefined){
+    //   document.querySelector('iframe').contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+    // }
 })
 first.addEventListener("click", ()=>{
-    document.querySelector( 'iframe').contentWindow.postMessage(JSON.stringify({ event: 'command', func: 'stopVideo' }), '*');
-})
-second.addEventListener("click", ()=>{
+    // document.querySelector( 'iframe').contentWindow.postMessage(JSON.stringify({ event: 'command', func: 'stopVideo' }), '*');
+    videoHeader.Components.Video.pause();
+  })
+  second.addEventListener("click", ()=>{
     videoHeader.Components.Video.pause();
 })
 third.addEventListener("click", ()=>{

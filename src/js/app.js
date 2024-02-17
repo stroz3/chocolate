@@ -1,9 +1,9 @@
-import * as Ivanfunctions from "./modules/function.js";
+// import * as Ivanfunctions from "./modules/function.js";
 import "./modules/splide.js";
 import {videoHeader} from './modules/splide.js';
 import "./modules/swiperMod.js"
 
-Ivanfunctions.isWebp()
+// Ivanfunctions.
 
 
 const burgerBtn = document.getElementById('burger');
@@ -39,12 +39,11 @@ for (i = 0; i < acc.length; i++) {
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
       this.style.borderRadius = null;
-      
     }
   });
 }
 
-const fadeIn = (el, timeout, display) => {
+export const fadeIn = (el, timeout, display) => {
   el.style.opacity = 0;
   el.style.display = display || 'block';
   el.style.transition = `opacity ${timeout}ms`;
@@ -54,7 +53,7 @@ const fadeIn = (el, timeout, display) => {
 };
 
 
-const fadeOut = (el, timeout) => {
+export const fadeOut = (el, timeout) => {
   el.style.opacity = 1;
   el.style.transition = `opacity ${timeout}ms`;
   el.style.opacity = 0;
@@ -72,6 +71,8 @@ let flag = true;
 let first = document.getElementById("firstBtn");
 let second = document.getElementById("secondBtn");
 let third = document.getElementById("thirdBtn");
+
+
 
 function close(){
   if(!flag){
@@ -107,11 +108,9 @@ third.addEventListener('click', (e) => {
 })
 
 
-document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
-
       const targetElement = document.querySelector(this.getAttribute('href'));
       burgerBtn.classList.remove('_active');
       headerMenu.classList.remove("_active");
@@ -125,7 +124,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-});
 
 
 

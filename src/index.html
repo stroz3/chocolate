@@ -9,11 +9,27 @@
     <!-- <img width="150" src="img/cover.jpg" alt="" srcset=""> -->
     @@include('html/main.html',{})
     @@include('html/footer.html',{})
+    <script>
+           function isWebp() {
+                function testWebp(callback) {
+                    let webP = new Image();
+                    webP.onload = webP.onerror = function () {
+                        callback(webP.height == 2);
+                    };
+                    webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+                }
+                testWebp(function (support) {
+                    let className = support === true ? 'webp' : 'no-webp';
+                    document.documentElement.classList.add(className);
+                })
+            }         
+            isWebp();      
+    </script>
     <script src="js/wow.min.js"></script>
     <script defer>
     new WOW().init();
     </script>
-    <script src="js/app.min.js" async></script>
+    <script src="js/app.min.js"></script>
 </body>
 
 </html>

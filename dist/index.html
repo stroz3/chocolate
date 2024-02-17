@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20240216190336">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/style.min.css?_v=20240217172638">
     <title>Главная</title>
 </head>
 
@@ -45,7 +45,7 @@
             <li class="splide__slide"  data-splide-youtube="https://www.youtube.com/watch?v=szeDvSf-9mI">
               <picture><source srcset="img/second.webp" type="image/webp"><img loading="lazy" src="img/second.png"></picture>
             </li>
-            <li class="splide__slide"  data-splide-youtube="https://www.youtube.com/watch?m1aN795gTjg">
+            <li class="splide__slide"  data-splide-youtube="https://www.youtube.com/watch?v=m1aN795gTjg">
               <picture><source srcset="img/third.webp" type="image/webp"><img loading="lazy" src="img/third.png"></picture>
             </li>
           </ul>
@@ -138,44 +138,7 @@
 
 
 <script>
-    const splide = new Splide( '#portfolio', {
-        type: 'loop',
-        drag: 'free',
-        perPage: 2,
-        gap: 20,
-        height:"400px",
-        autoWidth: true,
-        autoScroll: {
-            speed: 1,
-            pauseOnHover: false,
-        },
-        breakpoints:{
-            768:{
-            height: 271
-            }
-        }
-        } );
-
-        const splide2 = new Splide( '#portfolio2', {
-            type: 'loop',
-            drag: 'free',
-            perPage: 2,
-            gap: 20,
-            autoWidth: true,
-            height:"400px",
-            autoScroll: {
-            speed: -1,
-            pauseOnHover: false,
-            },
-            breakpoints:{
-            768:{
-                height: 271
-            }
-            }
-        } );
-
-        splide.mount({AutoScroll});
-        splide2.mount({AutoScroll});
+    
 </script>
 <div class="offers" id="offers">
     <div class="container">
@@ -357,6 +320,39 @@
     </div>
     
 </div>
+<style>
+   
+    #big-photo {
+        display: none;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-top: auto;
+        z-index: 999999;
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 0;
+        transition: 0.7s;
+    }
+    #big-photo img{
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        z-index: 999999;
+    }
+    
+</style>
+
 <div class="why">
     <div class="container">
         <h2 class="why__title">Почему мы</h2>
@@ -364,13 +360,14 @@
             <div class="grid-inner">
                 <div class="grid-item short item1 light-block">
                     <div class="front">
-                        <img loading="lazy" src="img/first.svg" alt="">
+                        
+                        <img  loading="lazy" src="img/first.svg" alt="">
                         <p>
                             Работаем командой профессиональных фотографов, дизайнеров и менеджеров
                         </p>
                     </div>
                     <div class="back">
-                        <img loading="lazy" src="img/Rectangle 34.svg" alt="">
+                        <img onclick="open_photo('img/Rectangle 34.svg')" loading="lazy" src="img/Rectangle 34.svg" alt="">
                     </div>                
             </div>
             </div>
@@ -383,7 +380,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img loading="lazy" src="img/Rectangle 34-1.svg" alt="">
+                        <img onclick="open_photo('img/Rectangle 34-1.svg')" loading="lazy" src="img/Rectangle 34-1.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -396,7 +393,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img loading="lazy" src="img/Rectangle 34-3.svg" alt="">
+                        <img onclick="open_photo('img/Rectangle 34-3.svg')" loading="lazy" src="img/Rectangle 34-3.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -409,7 +406,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img loading="lazy" src="img/Rectangle 34-5.svg" alt="">
+                        <img onclick="open_photo('img/Rectangle 34-5.svg')" loading="lazy" src="img/Rectangle 34-5.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -422,7 +419,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img loading="lazy" src="img/Rectangle 34-7.svg" alt="">
+                        <img onclick="open_photo('img/Rectangle 34-7.svg')" loading="lazy" src="img/Rectangle 34-7.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -435,7 +432,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img loading="lazy" src="img/Rectangle 34-2.svg" alt="">
+                        <img onclick="open_photo('img/Rectangle 34-2.svg')" loading="lazy" src="img/Rectangle 34-2.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -448,7 +445,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img loading="lazy" src="img/Rectangle 34-4.svg" alt="">
+                        <img onclick="open_photo('img/Rectangle 34-4.svg')" loading="lazy" src="img/Rectangle 34-4.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -461,13 +458,41 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img loading="lazy" src="img/Rectangle 34-6.svg" alt="">
+                        <img onclick="open_photo('img/Rectangle 34-6.svg')" loading="lazy" src="img/Rectangle 34-6.svg" alt="">
                     </div>
                 </div>
             </div>
         </div>              
     </div>
 </div>
+<div id="big-photo">
+    
+</div>
+
+
+
+<script>
+    const divPhoto = document.getElementById("big-photo")
+    function open_photo(photo) {
+        divPhoto.style.display="flex";
+        setTimeout(() => {
+            divPhoto.style.opacity = 1;
+        }, 10);
+        divPhoto.innerHTML =
+        // <span onclick='close_photo()'>&#10008;</span>
+            (`
+            <img onclick='close_photo()' src='${photo}'>`)
+        }
+
+    function close_photo() {
+        divPhoto.style.opacity = 1;
+        divPhoto.style.opacity = 0;
+        setTimeout(() => {
+            divPhoto.style.display = "none";
+            document.getElementById("big-photo").innerHTML = ""
+        }, 900);
+        }
+</script>
 <div class="ours">
     <div class="container">
         <h2 class="ours__title">Наши фотографы</h2>
@@ -727,11 +752,27 @@
         </div>
     </div>
 </footer>
-    <script src="js/wow.min.js?_v=20240216190336"></script>
+    <script>
+           function isWebp() {
+                function testWebp(callback) {
+                    let webP = new Image();
+                    webP.onload = webP.onerror = function () {
+                        callback(webP.height == 2);
+                    };
+                    webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+                }
+                testWebp(function (support) {
+                    let className = support === true ? 'webp' : 'no-webp';
+                    document.documentElement.classList.add(className);
+                })
+            }         
+            isWebp();      
+    </script>
+    <script src="js/wow.min.js?_v=20240217172638"></script>
     <script defer>
     new WOW().init();
     </script>
-    <script src="js/app.min.js?_v=20240216190336" async></script>
+    <script src="js/app.min.js?_v=20240217172638"></script>
 </body>
 
 </html>

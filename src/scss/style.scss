@@ -7,6 +7,7 @@
 // @import "animate";
 body{
     overflow-x: hidden;
+    scroll-behavior: none;
 }
 
 @keyframes turnIn {
@@ -1351,7 +1352,8 @@ body{
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(20px);
     justify-content: center;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     align-items: center;
     padding: 50px;
 }
@@ -1382,6 +1384,7 @@ body{
     right: 10px;
     width: 50px;
     height: 50px;
+    z-index: 99;
     cursor: pointer;
     &::before, &::after{
         content: "";
