@@ -1,0 +1,25 @@
+<svg width="146" height="118" viewBox="0 0 146 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1418_1371)">
+<ellipse cx="26.0158" cy="90.4406" rx="19.8032" ry="19.7961" fill="#FFE6C0"/>
+<ellipse cx="116.878" cy="20.5725" rx="10.484" ry="10.4803" fill="#FFE6C0"/>
+<mask id="mask0_1418_1371" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="13" y="0" width="120" height="118">
+<path d="M130.021 116V2.00034H15.9788V116H130.021Z" fill="white" stroke="white" stroke-width="4"/>
+</mask>
+<g mask="url(#mask0_1418_1371)">
+<path d="M25.0598 32.7911L21.3963 33.7531C17.7347 34.7148 15.5479 38.4525 16.5121 42.1018L25.0598 74.4517V32.7911Z" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M115.513 23.0103L113.75 16.3361C112.785 12.6869 109.035 10.5081 105.374 11.4698L61.791 22.9146" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M129.488 76.1288L120.94 43.7789V85.4395L124.603 84.4775C128.265 83.516 130.452 79.778 129.488 76.1288Z" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M82.0076 23.1451H31.5957C27.9862 23.1451 25.0598 26.0702 25.0598 29.6786V88.5519C25.0598 92.1603 27.9862 95.0854 31.5957 95.0854H114.405C118.014 95.0854 120.94 92.1603 120.94 88.5519V29.6786C120.94 26.0702 118.014 23.1451 114.405 23.1451H102.852" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M31.5955 95.0856C31.2172 95.0856 30.8472 95.0517 30.4866 94.9899L32.2501 101.664C33.2142 105.313 36.9644 107.492 40.6262 106.531L84.2087 95.0856H31.5955Z" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M54.925 95.0854L80.5114 66.1161L106.097 95.0854H54.925Z" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M57.0329 58.5307L31.4465 95.0854H54.9252L70.3751 77.5927L57.0329 58.5307Z" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M105.314 43.8956C105.314 49.2597 100.962 53.6084 95.5923 53.6084C90.2232 53.6084 85.8706 49.2597 85.8706 43.8956C85.8706 38.5314 90.2232 34.1827 95.5923 34.1827C100.962 34.1827 105.314 38.5314 105.314 43.8956Z" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<ellipse cx="92.415" cy="23.2894" rx="2.32979" ry="2.32895" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_1418_1371">
+<rect width="146" height="118" fill="white"/>
+</clipPath>
+</defs>
+</svg>
