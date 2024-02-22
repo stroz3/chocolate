@@ -159,7 +159,7 @@ const splide = new Splide( '#portfolio', {
           }
         });   
 
-    document.querySelectorAll('#portfolio>div.splide__track>ul>li>picture').forEach(el=>{
+    document.querySelectorAll('.splide-img').forEach(el=>{
       el.addEventListener("click", ()=>{
         if(el.id === "gallery"){
           open_gallery('port1.png', 'port2.png', 'port3.png', 'port4.png')
@@ -167,13 +167,13 @@ const splide = new Splide( '#portfolio', {
       })
     })
 
-    document.querySelectorAll('#portfolio2>div.splide__track>ul>li>picture').forEach(el=>{
-      el.addEventListener("click", ()=>{
-        if(el.id === "gallery"){
-          open_gallery('port1.png', 'port2.png', 'port3.png', 'port4.png')
-        }
-      })
-    })
+    // document.querySelectorAll('.splide-img').forEach(el=>{
+    //   el.addEventListener("click", ()=>{
+    //     if(el.id === "gallery"){
+    //       open_gallery('port1.png', 'port2.png', 'port3.png', 'port4.png')
+    //     }
+    //   })
+    // })
 
   splide.mount({AutoScroll});
   splide2.mount({AutoScroll});
