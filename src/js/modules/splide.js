@@ -44,10 +44,18 @@ const splide = new Splide( '#portfolio', {
   function gallery(id) {
 
     var gallery = new Splide(id, {
-      width: 600,
-      height: 300,
+      width: 1000,
+      height: 500,
       pagination: false,
-      cover: true
+      cover: true,
+      breakpoints:{
+        1000:{
+          height: 400
+        },
+        585:{
+          height: 300
+        }
+      }
     });
   
     var thumbnails = document.getElementsByClassName("thumbnail");
@@ -151,7 +159,7 @@ const splide = new Splide( '#portfolio', {
           }
         });   
 
-    document.querySelectorAll('#portfolio>div.splide__track>ul>li>img').forEach(el=>{
+    document.querySelectorAll('#portfolio>div.splide__track>ul>li>picture').forEach(el=>{
       el.addEventListener("click", ()=>{
         if(el.id === "gallery"){
           open_gallery('port1.png', 'port2.png', 'port3.png', 'port4.png')
@@ -159,7 +167,7 @@ const splide = new Splide( '#portfolio', {
       })
     })
 
-    document.querySelectorAll('#portfolio2>div.splide__track>ul>li>img').forEach(el=>{
+    document.querySelectorAll('#portfolio2>div.splide__track>ul>li>picture').forEach(el=>{
       el.addEventListener("click", ()=>{
         if(el.id === "gallery"){
           open_gallery('port1.png', 'port2.png', 'port3.png', 'port4.png')

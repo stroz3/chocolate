@@ -1054,6 +1054,54 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: Marmelad;
+  font-display: swap;
+  src: url("../fonts/Marmelad-Regular.woff2") format("woff2"), url("../fonts/Marmelad-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Marmelad;
+  font-display: swap;
+  src: url("../fonts/Marmelad-Regular.woff2") format("woff2"), url("../fonts/Marmelad-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
 /*!
  * Bootstrap Reboot v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -6024,7 +6072,7 @@ body {
   line-height: 42px;
 }
 
-#gallery {
+#gallery-splide {
   margin-right: auto;
   margin-left: auto;
 }
@@ -6084,6 +6132,15 @@ body {
   opacity: 0;
   -webkit-transition: 0.7s;
   transition: 0.7s;
+}
+
+.gallery-box {
+  width: 80%;
+}
+
+.gallery-box img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .offers {
@@ -6397,7 +6454,7 @@ body {
   border-radius: 30px;
 }
 
-.back img {
+.back picture {
   width: 150%;
 }
 
@@ -6774,7 +6831,7 @@ body {
 
 .swiper {
   width: 100%;
-  height: 600px;
+  height: 640px;
   padding-bottom: 90px !important;
 }
 
@@ -6791,6 +6848,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 30px;
 }
 
 .swiper-slide img {
@@ -7494,7 +7552,7 @@ form {
     border-radius: 30px;
   }
 
-  .back img {
+  .back picture {
     width: 115%;
   }
 
@@ -7547,6 +7605,10 @@ form {
 
   .portfolio {
     padding: 60px 0;
+  }
+
+  .gallery-box {
+    width: 720px;
   }
 
   .offers__block {
@@ -7752,6 +7814,10 @@ form {
     -webkit-box-ordinal-group: 7;
         -ms-flex-order: 6;
             order: 6;
+  }
+
+  .gallery-box {
+    width: 560px;
   }
 
   .offers__wrapper {
@@ -8219,6 +8285,10 @@ form {
     width: 150px;
   }
 
+  .gallery-box {
+    width: 90%;
+  }
+
   .call__block:last-child img {
     width: 320px;
     height: 214px;
@@ -8234,6 +8304,10 @@ form {
 
   #big-photo img {
     width: 100%;
+  }
+
+  .swiper {
+    height: 600px;
   }
 }
 
