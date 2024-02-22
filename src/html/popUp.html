@@ -1,8 +1,31 @@
+<style>
+    .popup__thanks h2{
+        color: rgb(61, 58, 56);
+        font-family: Montserrat;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+    }
+    .popup__thanks p{
+        color: rgb(61, 58, 56);
+        font-family: Montserrat;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0%;
+    }
+    #popupThanks{
+        display: none;
+    }
+</style>
+
 <div class="popup-container" id="popupContainer">
     <div class="popup-scroll">
         <div class="popup">
             <span class="close-btn" id="closePopup"></span>
-            <form>
+            <form class="popup__form">
               <div class="form__block">
                   <div class="form-group">
                       <h2 class="popup__title">Наши менеджеры уже готовы помочь с интересующими вопросами</h2>
@@ -41,10 +64,24 @@
                   <img class="form__arrow" loading="lazy" src="img/arrowSpiral.svg" alt="">
                   <img class="form__photo" loading="lazy" src="img/OBJECTS.png" alt="">
               </div>
-              <button class="form__button btn btn-light btn-popup" type="submit">
+              <button class="form__button btn btn-light btn-popup" type="submit" id="submitMessage">
                   <img id="animated-icon" loading="lazy" src="img/offer_phone.svg" alt="" class="shake">
               </button>
             </form>
+            
           </div>
     </div>
   </div>
+
+
+
+  <div class="popup-container" id="popupThanks" >
+        <div class="popup thanks">
+            <span class="close-btn light" id="closePopupThanks"></span>
+            <div class="popup__thanks">
+                <h2>Спасибо</h2>
+                <p>В ближайшее время наши менеджеры свяжутся с вами и позаботятся о том чтобы ответить на все вопросы!</p>
+            </div>
+          </div>
+  </div>
+

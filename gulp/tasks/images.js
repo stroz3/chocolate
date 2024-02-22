@@ -39,7 +39,7 @@ export const images = () => {
                     progressive: true,
                     svgoPlugins: [{ removeViewBox: false }],
                     interlaced: true,
-                    optimizationlevel: 4 // 0 to 7
+                    optimizationlevel: 6 // 0 to 7
                 })
             )
         )

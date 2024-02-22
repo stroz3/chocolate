@@ -22,13 +22,10 @@
         transition: 0.7s;
     }
     #big-photo img{
-        width: 90%;
-        height: 100%;
         display: flex;
         flex-direction: column;
         z-index: 999999;
     }
-    
 </style>
 
 <div class="why">
@@ -45,7 +42,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img onclick="open_photo('img/Rectangle 34.svg')" loading="lazy" src="img/Rectangle 34.svg" alt="">
+                        <img onclick="open_photo('img/1.png')" loading="lazy" src="img/1.png" alt="">
                     </div>                
             </div>
             </div>
@@ -58,7 +55,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img onclick="open_photo('img/Rectangle 34-1.svg')" loading="lazy" src="img/Rectangle 34-1.svg" alt="">
+                        <img onclick="open_photo('img/2.png')" loading="lazy" src="img/2.png" alt="">
                     </div>
                 </div>
             </div>
@@ -71,7 +68,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img onclick="open_photo('img/Rectangle 34-3.svg')" loading="lazy" src="img/Rectangle 34-3.svg" alt="">
+                        <img onclick="open_photo('img/4.png')" loading="lazy" src="img/4.png" alt="">
                     </div>
                 </div>
             </div>
@@ -84,7 +81,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img onclick="open_photo('img/Rectangle 34-5.svg')" loading="lazy" src="img/Rectangle 34-5.svg" alt="">
+                        <img onclick="open_photo('img/6.png')" loading="lazy" src="img/6.png" alt="">
                     </div>
                 </div>
             </div>
@@ -97,7 +94,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img onclick="open_photo('img/Rectangle 34-7.svg')" loading="lazy" src="img/Rectangle 34-7.svg" alt="">
+                        <img onclick="open_photo('img/8.png')" loading="lazy" src="img/8.png" alt="">
                     </div>
                 </div>
             </div>
@@ -110,7 +107,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img onclick="open_photo('img/Rectangle 34-2.svg')" loading="lazy" src="img/Rectangle 34-2.svg" alt="">
+                        <img onclick="open_photo('img/3.png')" loading="lazy" src="img/3.png" alt="">
                     </div>
                 </div>
             </div>
@@ -123,7 +120,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img onclick="open_photo('img/Rectangle 34-4.svg')" loading="lazy" src="img/Rectangle 34-4.svg" alt="">
+                        <img onclick="open_photo('img/5.png')" loading="lazy" src="img/5.png" alt="">
                     </div>
                 </div>
             </div>
@@ -136,7 +133,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img onclick="open_photo('img/Rectangle 34-6.svg')" loading="lazy" src="img/Rectangle 34-6.svg" alt="">
+                        <img onclick="open_photo('img/7.png')" loading="lazy" src="img/7.png" alt="">
                     </div>
                 </div>
             </div>
@@ -159,15 +156,18 @@
         divPhoto.innerHTML =
         // <span onclick='close_photo()'>&#10008;</span>
             (`
-            <img onclick='close_photo()' src='${photo}'>`)
+            <img  src='${photo}'>`)
         }
 
-    function close_photo() {
-        divPhoto.style.opacity = 1;
-        divPhoto.style.opacity = 0;
-        setTimeout(() => {
-            divPhoto.style.display = "none";
-            document.getElementById("big-photo").innerHTML = ""
-        }, 900);
-        }
+    // function close_photo() {
+        // onclick='close_photo()'
+    //     }
+        divPhoto.addEventListener('click', function (event) {
+            divPhoto.style.opacity = 1;
+            divPhoto.style.opacity = 0;
+            setTimeout(() => {
+                divPhoto.style.display = "none";
+                document.getElementById("big-photo").innerHTML = ""
+            }, 900);
+        });
 </script>

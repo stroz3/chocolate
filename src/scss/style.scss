@@ -4,9 +4,8 @@
 @import "splide-extension-video.min";
 @import "animate";
 @import "swiper-bundle";
-// @import "animate";
+
 body{
-    overflow-x: hidden;
     scroll-behavior: none;
 }
 
@@ -490,7 +489,7 @@ body{
     &__img{
         img{
             width: 656px;
-            height: 528px;
+            height: 450px;
             object-fit: cover;
             border-radius: 50px;
         }
@@ -528,7 +527,56 @@ body{
         line-height: 42px;
     }
 }
+#gallery{
+    margin-right: auto;
+    margin-left: auto;
+}
+.thumbnails {
+    display: flex;
+    margin: 1rem auto 0;
+    padding: 0;
+    justify-content: center;
+  }
 
+  .thumbnail {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    list-style: none;
+    margin: 0 0.2rem;
+    cursor: pointer;
+    opacity: 0.3;
+  }
+
+  .thumbnail.is-active {
+    opacity: 1;
+  }
+
+  .thumbnail img {
+    width: 100%;
+    height: 45px;
+  }
+  #big-gallery {
+    display: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    z-index: 999999;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: 0.7s;
+}
 
 .offers {
     // .offers__wrapper
@@ -669,6 +717,10 @@ body{
 
     &__block-img {
         text-align: center;
+        img{
+            width: 146px;
+            height: 118px;
+        }
     }
 
     // .interesting__block-title
@@ -809,6 +861,11 @@ body{
 .back {
     transform: rotateY(180deg) translateZ(0);
     cursor: pointer;
+    overflow: hidden;
+    border-radius: 30px;
+    img{
+        width: 150%;
+    }
 }
 
 .short {
@@ -898,7 +955,9 @@ body{
 		&__block {
             position: relative;
 		}
-
+        &__block-right{
+            width: 627px;
+        }
 		// .call__text
 
 		&__text {
@@ -1164,7 +1223,7 @@ body{
 
 .swiper {
     width: 100%;
-    height: 551px;
+    height: 600px;
     padding-bottom: 90px !important;
 }
 .swiper-slide {
@@ -1174,15 +1233,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    
 }
 
 .swiper-slide img {
-    display: block;
+    border-radius: 30px;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
+    object-fit: fill;
 }
 .writeAbout {
     padding-bottom: 90px;
@@ -1255,17 +1313,20 @@ body{
         display: none;
     }
     .splide__slide{
-        &:nth-child(2n + 1){
-            img{
-                border-radius: 50px !important;
-            }
+        img{
+            object-fit: cover;
+            height: 400px;
+            width: 100%;
         }
-        &:nth-child(2n){
-            img{
-                border-radius: 50px 50px 155px 50px !important;
-            }
-        }
+        
     }
+}
+.honest__slide-img{
+    border-radius: 50px;
+
+}
+.odd__slide-img{
+    border-radius: 50px 50px 155px 50px;
 }
 
 
@@ -1342,7 +1403,6 @@ body{
 }
 
 .popup-container {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -1357,6 +1417,9 @@ body{
     align-items: center;
     padding: 50px;
 }
+#popupContainer{
+    display: none;
+}
 
 .popup {
     background-color: white;
@@ -1369,6 +1432,11 @@ body{
     width: 750px;
     max-height: 80%;
    
+}
+.thanks{
+    width: 420px;
+    border-radius: 25px;
+    text-align: left; background-color: rgb(255, 230, 192);
 }
 .form__block{
     &:last-child{
@@ -1407,7 +1475,13 @@ body{
         transform: rotate(-45deg);
     }
 }
-
+.light{
+    &::before, &::after{
+        width: 30px;
+        height: 2px;
+    }
+    right: 0;
+}
 form {
     margin-top: 20px;
     display: flex;
@@ -1519,6 +1593,7 @@ form {
 
 .custom-checkbox input {
     -webkit-appearance: none;
+    appearance: none;
     position: absolute; 
 }
 
@@ -1580,6 +1655,7 @@ form {
     }
     .mySwiper{
         max-width: 100%;
+        padding: 0 20px;
     }
     .grid-inner{
         &:nth-child(4),  &:nth-child(2){
@@ -1776,7 +1852,10 @@ form {
         flex-direction: column-reverse;
 
     }
-   
+    .interesting__block-img img{
+        width: 110px;
+        height: 89px;
+    }
     .footer{
         margin-top: 470px;
     }
@@ -1893,6 +1972,9 @@ form {
         }
         grid-gap: 10px;
     }
+    .two-blocks{
+        padding-top: 0 !important;
+    }
     .button-play{
         margin-bottom: 0;
         left: 0;
@@ -1960,6 +2042,9 @@ form {
                 height: 13px;
             }
         }
+    }
+    .video__wrapper{
+        height: 370px;
     }
     @keyframes secondButton {
         0% {
@@ -2051,7 +2136,13 @@ form {
                 
           }
       }
-      
+      #portfolio2, #portfolio{
+        .splide__slide{
+            img{
+                height: 271px;
+            }
+        }
+      }
       .portfolio{
         margin-top: 80px;
         padding: 40px 0;
@@ -2165,7 +2256,7 @@ form {
     }
     .checkbox{
         width: 35px;
-    height: 33px;
+        height: 33px;
     }
 }
 @media (max-width: 575px) {
@@ -2191,6 +2282,9 @@ form {
       .panel p{
         width: 100%;
       }
+      #big-photo img{
+        width: 100%;
+      }
 }
 @media (max-width: 480px) {
     .grid-item{
@@ -2203,6 +2297,7 @@ form {
             }
         }
     }
+    
     .header__phone{
         a{
             display: none;
@@ -2236,6 +2331,10 @@ form {
     }
     .popup{
         width: 320px;
+    }
+    .thanks{
+        padding-bottom: 0px;
+        border-radius: 20px;
     }
     form{
         margin-top: 0;

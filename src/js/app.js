@@ -9,6 +9,7 @@ import "./modules/swiperMod.js"
 const burgerBtn = document.getElementById('burger');
 const html = document.querySelector('html');
 const openPopupBtn = document.querySelectorAll('#openPopup');
+const sumbitMessageBtn = document.getElementById('submitMessage');
 const closePopupBtn = document.getElementById('closePopup');
 const popupContainer = document.getElementById('popupContainer');
 
@@ -103,9 +104,7 @@ first.addEventListener('click', (e) => {
 second.addEventListener('click', (e) => {
   close();
 })
-third.addEventListener('click', (e) => {
-  close();
-})
+
 
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -118,7 +117,7 @@ third.addEventListener('click', (e) => {
       if (targetElement) {
         const offset = targetElement.getBoundingClientRect().top + window.scrollY;
         window.scrollTo({
-          top: offset,
+          top: offset - 100,
           behavior: 'smooth'
         });
       }
@@ -140,7 +139,7 @@ third.addEventListener('click', (e) => {
     }
   });
 
-
+var popupThanks = document.getElementById('popupThanks');
 
 openPopupBtn.forEach(el=>{
   el.addEventListener('click', function () {
@@ -148,16 +147,35 @@ openPopupBtn.forEach(el=>{
     html.style.overflowY = "hidden";
   });  
 })
-
+document.getElementById('closePopupThanks').addEventListener('click', function () {
+  popupThanks.style.display = 'none';
+  html.style.overflowY = "auto";
+});
 closePopupBtn.addEventListener('click', function () {
   popupContainer.style.display = 'none';
   html.style.overflowY = "auto";
 });
+
+sumbitMessageBtn.addEventListener('click', function () {
+  popupThanks.style.display = "flex";
+  popupContainer.style.display = 'none';
+
+});
+
+popupThanks.addEventListener('click', function (event) {
+  if (event.target === this) {
+    popupThanks.style.display = 'none';
+    html.style.overflowY = "auto";
+  }
+});
+
 popupContainer.addEventListener('click', function (event) {
   if (event.target === this) {
     popupContainer.style.display = 'none';
     html.style.overflowY = "auto";
   }
 });
+
+
 
 

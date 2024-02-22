@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="css/style.min.css?_v=20240217172638">
+    <link rel="stylesheet" href="css/style.min.css?_v=20240222141609">
     <title>Главная</title>
 </head>
 
@@ -35,17 +35,30 @@
         </div>
     </div>
 </header>
+
+<style>
+     #videoHeader .splide__slide {
+    position: relative;
+ }
+ #videoHeader .splide__video__wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ }
+</style>
 <div class="video">
     <div id="videoHeader" class="splide">
         <div class="splide__track">
           <ul class="splide__list">
-            <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=nv7FUbJQkjg">
+            <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=nv7FUbJQkjg?vq=hd1080">
               <picture><source srcset="img/VideoScreen.webp" type="image/webp"><img loading="eager"  src="img/VideoScreen.png"></picture>
             </li>
-            <li class="splide__slide"  data-splide-youtube="https://www.youtube.com/watch?v=szeDvSf-9mI">
+            <li class="splide__slide"  data-splide-youtube="https://www.youtube.com/watch?v=szeDvSf-9mI?vq=hd1080">
               <picture><source srcset="img/second.webp" type="image/webp"><img loading="lazy" src="img/second.png"></picture>
             </li>
-            <li class="splide__slide"  data-splide-youtube="https://www.youtube.com/watch?v=m1aN795gTjg">
+            <li class="splide__slide"  data-splide-youtube="https://www.youtube.com/watch?v=m1aN795gTjg?vq=hd1080">
               <picture><source srcset="img/third.webp" type="image/webp"><img loading="lazy" src="img/third.png"></picture>
             </li>
           </ul>
@@ -70,7 +83,9 @@
         </div>
     </div>
 </div>
-    <!-- <picture><source srcset="img/cover.webp, " type="image/webp"><img width="150" src="img/cover.jpg" alt="" srcset=""></picture> -->
+
+
+
     <div class="about" id="about">
     <div class="container">
             <div class="about__wrapper">
@@ -78,24 +93,22 @@
                     <h2 class="about__title">О студии</h2>
                     <div class="about__text-p wow slideInLeft">
                         <p class="about__p">
-                            Когда‑то, в недалёком будущем, вашим детям попадётся в руки свадебный альбом. Ваш будущий свадебный альбом. Перелистывая странички, они окунутся в эту волшебную атмосферу первых мгновений начала жизни семьи. Вашей будущей большой и крепкой семьи.
+                            В недалёком будущем, вашим детям попадётся в руки свадебный альбом. Перелистывая странички, они окунутся в эту волшебную атмосферу первых мгновений начала жизни семьи.
                         </p >
                         <p class="about__p">
-                            Для создания и передачи всего многообразия таких воспоминаний мы собрали команду единомышленников — профессионалов, с которыми вам будет комфортно!
+                            Для создания и передачи всего многообразия таких воспоминаний мы собрали команду единомышленников — профессионалов. С вами будет работать менеджер, фотограф и дизайнер.
                         </p>
                         <p class="about__p">
-                            С вами будет работать менеджер, фотограф и дизайнер. 
+                            Благодаря слаженной работе нашей команды вы получите индивидуальный подход, высококлассную, душевную съёмку с учётом всех пожеланий, качественную и быструю обработку фото и видеоматериалов.
                         </p>
                         <p class="about__p">
-                            Благодаря слаженной работе нашей команды вы получите уникальный подход именно к вашей свадьбе, высококлассную, душевную съёмку с учётом всех пожеланий, качественную прогнозируемую и, что не маловажно, быструю обработку фото и видеоматериалов. 
+                            Оставляем только положительные впечатления, приятные эмоции и много классных кадров вашей свадьбы:)
                         </p>
-                        <p class="about__p">
-                            Оставляем только положительные впечатления, приятные эмоции и много классных кадров вашей свадьбы:)
-                        </p>
+                        
                     </div>
                 </div>
                 <div class="about__img wow slideInRight">
-                    <img loading="lazy" src="img/About.svg" alt="">
+                    <picture><source srcset="img/About.webp" type="image/webp"><img loading="lazy" src="img/About.png" alt=""></picture>
                 </div>
             </div>
         </div>
@@ -106,30 +119,28 @@
             <h2 class="portfolio__title">
                 Портфолио
             </h2>
-            <p class="portfolio__clue">
-                ***Потяни чтобы вернуть
-            </p>
         </div>
     </div>
     <div class="sliders ">
         <section id="portfolio" class="splide wow fadeInUp" data-wow-duration="2s" aria-label="portfolio">
             <div class="splide__track">
                   <ul class="splide__list">
-                      <li class="splide__slide"><picture><source srcset="img/port1.webp" type="image/webp"><img loading="lazy" src="img/port1.png" alt=""></picture></li>
-                      <li class="splide__slide"><img loading="lazy" src="img/port2.svg" alt=""></li>
-                      <li class="splide__slide"><img loading="lazy" src="img/port3.svg" alt=""></li>
-                      <li class="splide__slide"><img loading="lazy" src="img/port2.1.svg" alt=""></li>
-                      <li class="splide__slide"><img loading="lazy" src="img/port2.2.svg" alt=""></li>
+                      <li class="splide__slide"><picture><source srcset="img/port1.webp" type="image/webp"><img id="gallery" class="odd__slide-img" loading="lazy" src="img/port1.png" alt=""></picture></li>
+                      <li class="splide__slide "><picture><source srcset="img/port2.webp" type="image/webp"><img id="gallery" class="honest__slide-img" loading="lazy" src="img/port2.png" alt=""></picture></li>
+                      <li class="splide__slide"><picture><source srcset="img/port3.webp" type="image/webp"><img id="gallery" class="odd__slide-img" loading="lazy" src="img/port3.png" alt=""></picture></li>
+                      <li class="splide__slide"><picture><source srcset="img/port4.webp" type="image/webp"><img id="gallery" class="honest__slide-img" loading="lazy" src="img/port4.png" alt=""></picture></li>
+                      <li class="splide__slide"><picture><source srcset="img/port5.webp" type="image/webp"><img id="gallery" class="odd__slide-img" loading="lazy" src="img/port5.png" alt=""></picture></li>
                   </ul>
             </div>
           </section>
           <section id="portfolio2" class="splide wow fadeInUp" data-wow-duration="2s" aria-label="portfolio2" >
             <div class="splide__track">
                   <ul class="splide__list">
-                      <li class="splide__slide"><img loading="lazy" src="img/port2.2.svg" alt=""></li>
-                      <li class="splide__slide"><img loading="lazy" src="img/port2.3.svg" alt=""></li>
-                      <li class="splide__slide"><img loading="lazy" src="img/port2.4.svg" alt=""></li>
-                      <li class="splide__slide"><img loading="lazy" src="img/port2.4.svg" alt=""></li>
+                      <li class="splide__slide"><picture><source srcset="img/port5.webp" type="image/webp"><img id="gallery" class="odd__slide-img"loading="lazy" src="img/port5.png" alt=""></picture></li>
+                      <li class="splide__slide"><picture><source srcset="img/port6.webp" type="image/webp"><img id="gallery" class="honest__slide-img" loading="lazy" src="img/port6.png" alt=""></picture></li>
+                      <li class="splide__slide"><picture><source srcset="img/port7.webp" type="image/webp"><img id="gallery" class="odd__slide-img" loading="lazy" src="img/port7.png" alt=""></picture></li>
+                      <li class="splide__slide"><picture><source srcset="img/port2.webp" type="image/webp"><img id="gallery" class="honest__slide-img" loading="lazy" src="img/port2.png" alt=""></picture></li>
+                      <li class="splide__slide"><picture><source srcset="img/port3.webp" type="image/webp"><img id="gallery" class="odd__slide-img" loading="lazy" src="img/port3.png" alt=""></picture></li>
                   </ul>
             </div>
           </section>
@@ -137,9 +148,135 @@
 </div>
 
 
+
+<div id="big-gallery">
+  <div class="gallery-box">
+    <section id="gallery-splide" class="splide" aria-label="My Awesome Gallery">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <img
+              src="img/port1.png"
+              alt=""
+            />
+          </li>
+          <li class="splide__slide">
+            <img
+              src="img/port1.png"
+              alt=""
+            />
+          </li>
+          <li class="splide__slide">
+            <img
+              src="img/port1.png"
+              alt=""
+            />
+          </li>
+          <li class="splide__slide">
+            <img
+              src="img/port1.png"
+              alt=""
+            />
+          </li>
+        </ul>
+      </div>
+    </section>
+    <ul id="thumbnails" class="thumbnails">
+      <li class="thumbnail">
+        <picture><source srcset="img/port1.webp" type="image/webp"><img loading="lazy" src="img/port1.png" alt=""></picture>
+      </li>
+      <li class="thumbnail">
+        <picture><source srcset="img/port1.webp" type="image/webp"><img loading="lazy" src="img/port1.png" alt=""></picture>
+      </li>
+      <li class="thumbnail">
+        <picture><source srcset="img/port1.webp" type="image/webp"><img loading="lazy" src="img/port1.png" alt=""></picture>
+      </li>
+      <li class="thumbnail">
+        <picture><source srcset="img/port1.webp" type="image/webp"><img loading="lazy" src="img/port1.png" alt=""></picture>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
 <script>
-    
+  
 </script>
+
+<!-- Тут нужно попробовать сделать так, чтобы брались данные о картинках и потом просто создавались тут -->
+<!-- <div class="portfolio__gallery" id="gallery-one">
+        <div id="splide-gallery-one" class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <picture><source srcset="image1.webp" type="image/webp"><img src="image1.jpg" /></picture>
+                </li>
+                <li class="splide__slide">
+                  <picture><source srcset="image2.webp" type="image/webp"><img src="image2.jpg" /></picture>
+                </li>
+                <li class="splide__slide">
+                  <picture><source srcset="image3.webp" type="image/webp"><img src="image3.jpg" /></picture>
+                </li>
+                <li class="splide__slide">
+                  <picture><source srcset="image4.webp" type="image/webp"><img src="image4.jpg" /></picture>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <ul id="splide-thumbnails-one" class="thumbnails">
+            <li class="thumbnail">
+              <picture><source srcset="thumbnail1.webp" type="image/webp"><img src="thumbnail1.jpg" /></picture>
+            </li>
+            <li class="thumbnail">
+              <picture><source srcset="thumbnail2.webp" type="image/webp"><img src="thumbnail2.jpg" /></picture>
+            </li>
+            <li class="thumbnail">
+              <picture><source srcset="thumbnail3.webp" type="image/webp"><img src="thumbnail3.jpg" /></picture>
+            </li>
+            <li class="thumbnail">
+              <picture><source srcset="thumbnail4.webp" type="image/webp"><img src="thumbnail4.jpg" /></picture>
+            </li>
+          </ul>
+</div>
+
+<div class="portfolio__gallery" id="gallery-two">
+    <div id="splide-gallery-one" class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <picture><source srcset="image1.webp" type="image/webp"><img src="image1.jpg" /></picture>
+            </li>
+            <li class="splide__slide">
+              <picture><source srcset="image2.webp" type="image/webp"><img src="image2.jpg" /></picture>
+            </li>
+            <li class="splide__slide">
+              <picture><source srcset="image3.webp" type="image/webp"><img src="image3.jpg" /></picture>
+            </li>
+            <li class="splide__slide">
+              <picture><source srcset="image4.webp" type="image/webp"><img src="image4.jpg" /></picture>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <ul id="splide-thumbnails-one" class="thumbnails">
+        <li class="thumbnail">
+          <picture><source srcset="thumbnail1.webp" type="image/webp"><img src="thumbnail1.jpg" /></picture>
+        </li>
+        <li class="thumbnail">
+          <picture><source srcset="thumbnail2.webp" type="image/webp"><img src="thumbnail2.jpg" /></picture>
+        </li>
+        <li class="thumbnail">
+          <picture><source srcset="thumbnail3.webp" type="image/webp"><img src="thumbnail3.jpg" /></picture>
+        </li>
+        <li class="thumbnail">
+          <picture><source srcset="thumbnail4.webp" type="image/webp"><img src="thumbnail4.jpg" /></picture>
+        </li>
+      </ul>
+</div> -->
+
+
 <div class="offers" id="offers">
     <div class="container">
         <h2 class="offers__title">Предложения</h2>
@@ -220,6 +357,57 @@
         </div>
     </div>
 </div>
+<style>
+     #big-video {
+        display: none;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-top: auto;
+        z-index: 999999;
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 0;
+        transition: 0.7s;
+    }
+ .video-box {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 0px;
+    height: 92vh;
+    width: 512px;
+ }
+ .video-box iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ }
+ 
+    /* #big-video img{
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        z-index: 999999;
+    } */
+    @media (max-width: 585px) {
+        .video-box{
+            width: 250px;
+        }
+    }
+</style>
+
 <div class="interesting" id="price">
     <div class="container">
         <div class="interesting__title">
@@ -230,7 +418,7 @@
         <div class="interesting__wrapper wow fadeInUp">
             <div class="interesting__block">
                 <div class="interesting__block-img">
-                    <img src="img/Camera.svg" alt="">
+                    <picture><source srcset="img/Camera.webp" type="image/webp"><img loading="lazy" src="img/Camera.png" alt=""></picture>
                 </div>
                 <div class="interesting__block-title">
                     <h2 class="interesting__block-title-h2">Видеограф</h2>
@@ -242,12 +430,12 @@
                     <p class="interesting__block-price-p">15 000 ₽</p>
                 </div>
                 <div class="interesting__block-buy">
-                    <button class="interesting__block-buy-btn"><img src="img/playBtnBlack.svg" alt=""></button>
+                    <button class="interesting__block-buy-btn" onclick="open_video('https://www.youtube.com/embed/PjoiuBS-kVE?si=OdY6KYsjuAYBm6F4')"><img src="img/playBtnBlack.svg" alt=""></button>
                 </div>
             </div>
             <div class="interesting__block">
                 <div class="interesting__block-img">
-                    <img src="img/Puwder.svg" alt="">
+                    <picture><source srcset="img/Puwder.webp" type="image/webp"><img loading="lazy" src="img/Puwder.png" alt=""></picture>
                 </div>
                 <div class="interesting__block-title">
                     <h2 class="interesting__block-title-h2">Стилист-Визажист</h2>
@@ -259,12 +447,12 @@
                     <p class="interesting__block-price-p">10 000 ₽</p>
                 </div>
                 <div class="interesting__block-buy">
-                    <button class="interesting__block-buy-btn"><img src="img/playBtnBlack.svg" alt=""></button>
+                    <button class="interesting__block-buy-btn" onclick="open_video('https://www.youtube.com/embed/PjoiuBS-kVE?si=OdY6KYsjuAYBm6F4')"><img src="img/playBtnBlack.svg" alt=""></button>
                 </div>
             </div>
             <div class="interesting__block">
                 <div class="interesting__block-img">
-                    <img src="img/LoveStory.svg" alt="">
+                    <picture><source srcset="img/LoveStory.webp" type="image/webp"><img loading="lazy" src="img/LoveStory.png" alt=""></picture>
                 </div>
                 <div class="interesting__block-title">
                     <h2 class="interesting__block-title-h2">Love Story</h2>
@@ -276,31 +464,81 @@
                     <p class="interesting__block-price-p">25 000 ₽</p>
                 </div>
                 <div class="interesting__block-buy">
-                    <button class="interesting__block-buy-btn"><img src="img/playBtnBlack.svg" alt=""></button>
+                    <button class="interesting__block-buy-btn" onclick="open_video('https://www.youtube.com/embed/PjoiuBS-kVE?si=OdY6KYsjuAYBm6F4')"><img src="img/playBtnBlack.svg" alt=""></button>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<div id="big-video" onclick='close_video()'>
+    <div class="video-box">
+
+    </div>
+</div>
+
+<script>
+    const divVideo = document.getElementById("big-video")
+    const divVidoeBox = document.querySelector(".video-box");
+    function open_video(url) {
+        divVideo.style.display="flex";
+        setTimeout(() => {
+            divVideo.style.opacity = 1;
+        }, 10);
+        divVidoeBox.innerHTML =
+        // <span onclick='close_photo()'>&#10008;</span>
+        (`
+            
+            <iframe width="100%" height="315" src="${url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            `)
+        }
+
+    function close_video() {
+        divVideo.addEventListener('click', function (event) {
+            if (event.target === this) {
+                divVideo.style.opacity = 1;
+                divVideo.style.opacity = 0;
+                setTimeout(() => {
+                    divVideo.style.display = "none";
+                    document.querySelector(".video-box").innerHTML = ""
+                }, 900);
+            }
+        });
+        
+        }
+</script>
+<style>
+   #ourVideo .splide__slide {
+    position: relative;
+    width: 255px !important;
+ }
+ #ourVideo .splide__video__wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ }
+</style>
+
 <div class="ourVideos" id="ourVideos">
     <div class="container">
         <h2 class="ourVideos__title">Наши съемки</h2>
     </div>
     <div id="ourVideo" class="splide">
-        
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=PjoiuBS-kVE">
               <picture><source srcset="img/sreenshot.webp" type="image/webp"><img loading="lazy" src="img/sreenshot.png"></picture>
             </li>
-            <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=cdz__ojQOuU">
-              <img loading="lazy" src="img/Video2.svg">
+            <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=PjoiuBS-kVE">
+              <picture><source srcset="img/sreenshot.webp" type="image/webp"><img loading="lazy" src="img/sreenshot.png"></picture>
             </li>
-            <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=cdz__ojQOuU">
-              <img loading="lazy" src="img/Video3.svg">
+            <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=PjoiuBS-kVE">
+              <picture><source srcset="img/sreenshot.webp" type="image/webp"><img loading="lazy" src="img/sreenshot.png"></picture>
             </li>
-            <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=cdz__ojQOuU">
-              <img loading="lazy" src="img/Video4.svg">
+            <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=PjoiuBS-kVE">
+              <picture><source srcset="img/sreenshot.webp" type="image/webp"><img loading="lazy" src="img/sreenshot.png"></picture>
             </li>
             
           </ul>
@@ -344,13 +582,10 @@
         transition: 0.7s;
     }
     #big-photo img{
-        width: 90%;
-        height: 100%;
         display: flex;
         flex-direction: column;
         z-index: 999999;
     }
-    
 </style>
 
 <div class="why">
@@ -367,7 +602,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img onclick="open_photo('img/Rectangle 34.svg')" loading="lazy" src="img/Rectangle 34.svg" alt="">
+                        <picture><source srcset="img/1.webp" type="image/webp"><img onclick="open_photo('img/1.png')" loading="lazy" src="img/1.png" alt=""></picture>
                     </div>                
             </div>
             </div>
@@ -380,7 +615,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img onclick="open_photo('img/Rectangle 34-1.svg')" loading="lazy" src="img/Rectangle 34-1.svg" alt="">
+                        <picture><source srcset="img/2.webp" type="image/webp"><img onclick="open_photo('img/2.png')" loading="lazy" src="img/2.png" alt=""></picture>
                     </div>
                 </div>
             </div>
@@ -393,7 +628,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img onclick="open_photo('img/Rectangle 34-3.svg')" loading="lazy" src="img/Rectangle 34-3.svg" alt="">
+                        <picture><source srcset="img/4.webp" type="image/webp"><img onclick="open_photo('img/4.png')" loading="lazy" src="img/4.png" alt=""></picture>
                     </div>
                 </div>
             </div>
@@ -406,7 +641,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img onclick="open_photo('img/Rectangle 34-5.svg')" loading="lazy" src="img/Rectangle 34-5.svg" alt="">
+                        <picture><source srcset="img/6.webp" type="image/webp"><img onclick="open_photo('img/6.png')" loading="lazy" src="img/6.png" alt=""></picture>
                     </div>
                 </div>
             </div>
@@ -419,7 +654,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img onclick="open_photo('img/Rectangle 34-7.svg')" loading="lazy" src="img/Rectangle 34-7.svg" alt="">
+                        <picture><source srcset="img/8.webp" type="image/webp"><img onclick="open_photo('img/8.png')" loading="lazy" src="img/8.png" alt=""></picture>
                     </div>
                 </div>
             </div>
@@ -432,7 +667,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img onclick="open_photo('img/Rectangle 34-2.svg')" loading="lazy" src="img/Rectangle 34-2.svg" alt="">
+                        <picture><source srcset="img/3.webp" type="image/webp"><img onclick="open_photo('img/3.png')" loading="lazy" src="img/3.png" alt=""></picture>
                     </div>
                 </div>
             </div>
@@ -445,7 +680,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img onclick="open_photo('img/Rectangle 34-4.svg')" loading="lazy" src="img/Rectangle 34-4.svg" alt="">
+                        <picture><source srcset="img/5.webp" type="image/webp"><img onclick="open_photo('img/5.png')" loading="lazy" src="img/5.png" alt=""></picture>
                     </div>
                 </div>
             </div>
@@ -458,7 +693,7 @@
                         </p>
                     </div>
                     <div class="back">
-                        <img onclick="open_photo('img/Rectangle 34-6.svg')" loading="lazy" src="img/Rectangle 34-6.svg" alt="">
+                        <picture><source srcset="img/7.webp" type="image/webp"><img onclick="open_photo('img/7.png')" loading="lazy" src="img/7.png" alt=""></picture>
                     </div>
                 </div>
             </div>
@@ -481,32 +716,35 @@
         divPhoto.innerHTML =
         // <span onclick='close_photo()'>&#10008;</span>
             (`
-            <img onclick='close_photo()' src='${photo}'>`)
+            <img  src='${photo}'>`)
         }
 
-    function close_photo() {
-        divPhoto.style.opacity = 1;
-        divPhoto.style.opacity = 0;
-        setTimeout(() => {
-            divPhoto.style.display = "none";
-            document.getElementById("big-photo").innerHTML = ""
-        }, 900);
-        }
+    // function close_photo() {
+        // onclick='close_photo()'
+    //     }
+        divPhoto.addEventListener('click', function (event) {
+            divPhoto.style.opacity = 1;
+            divPhoto.style.opacity = 0;
+            setTimeout(() => {
+                divPhoto.style.display = "none";
+                document.getElementById("big-photo").innerHTML = ""
+            }, 900);
+        });
 </script>
 <div class="ours">
     <div class="container">
         <h2 class="ours__title">Наши фотографы</h2>
         <div class="ours__wrapper">
             <div class="ours__block wow slideInRight" >
-                <img src="img/Ellipse 2.svg" alt="" class="ours__block-photo">
+                <img src="img/Ellipse 2.png" alt="" class="ours__block-photo">
                 <h2 class="ours__block-title">Владимир Яновский</h2>
             </div>
             <div class="ours__block wow slideInRight" data-wow-delay="0.2s">
-                <img src="img/Ellipse 3.svg" alt="" class="ours__block-photo">
+                <img src="img/Ellipse 3.png" alt="" class="ours__block-photo">
                 <h2 class="ours__block-title">Алексей Макаров</h2>
             </div>
             <div class="ours__block wow slideInRight" data-wow-delay="0.3s">
-                <img src="img/Ellipse 4.svg" alt="" class="ours__block-photo">
+                <img src="img/Ellipse 4.png" alt="" class="ours__block-photo">
                 <h2 class="ours__block-title">Алексей Макаров</h2>
             </div>
         </div>
@@ -527,25 +765,25 @@
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img loading="lazy" src="img/Отзыв1.svg" alt="">
+            <picture><source srcset="img/Отзыв1.webp" type="image/webp"><img loading="lazy" src="img/Отзыв1.png" alt=""></picture>
           </div>
           <div class="swiper-slide">
-            <img loading="lazy" src="img/Отзыв2.svg" alt="">
+            <picture><source srcset="img/Отзыв2.webp" type="image/webp"><img loading="lazy" src="img/Отзыв2.png" alt=""></picture>
           </div>
           <div class="swiper-slide">
-            <img loading="lazy" src="img/Отзыв3.svg" alt="">
+            <picture><source srcset="img/Отзыв3.webp" type="image/webp"><img loading="lazy" src="img/Отзыв3.png" alt=""></picture>
           </div>
           <div class="swiper-slide">
-            <img loading="lazy" src="img/Отзыв4.svg" alt="">
+            <picture><source srcset="img/Отзыв4.webp" type="image/webp"><img loading="lazy" src="img/Отзыв4.png" alt=""></picture>
           </div>
           <div class="swiper-slide">
-            <img loading="lazy" src="img/Отзыв1.svg" alt="">
+            <picture><source srcset="img/Отзыв1.webp" type="image/webp"><img loading="lazy" src="img/Отзыв1.png" alt=""></picture>
           </div>
           <div class="swiper-slide">
-            <img loading="lazy" src="img/Отзыв2.svg" alt="">
+            <picture><source srcset="img/Отзыв2.webp" type="image/webp"><img loading="lazy" src="img/Отзыв2.png" alt=""></picture>
           </div>
           <div class="swiper-slide">
-            <img loading="lazy" src="img/Отзыв3.svg" alt="">
+            <picture><source srcset="img/Отзыв3.webp" type="image/webp"><img loading="lazy" src="img/Отзыв3.png" alt=""></picture>
           </div>
         </div>
         <div class="swiper-button-next">
@@ -637,7 +875,7 @@
                 <img class="call__arrow" src="img/Arrow.svg" alt="">
             </div>
             <div class="call__block">
-                <img src="img/Image.svg" alt="">
+                <picture><source srcset="img/Image.webp" type="image/webp"><img class="call__block-right" src="img/Image.png" alt=""></picture>
             </div>
             
         </div>
@@ -645,11 +883,34 @@
 </div>
 
 
+<style>
+    .popup__thanks h2{
+        color: rgb(61, 58, 56);
+        font-family: Montserrat;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+    }
+    .popup__thanks p{
+        color: rgb(61, 58, 56);
+        font-family: Montserrat;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0%;
+    }
+    #popupThanks{
+        display: none;
+    }
+</style>
+
 <div class="popup-container" id="popupContainer">
     <div class="popup-scroll">
         <div class="popup">
             <span class="close-btn" id="closePopup"></span>
-            <form>
+            <form class="popup__form">
               <div class="form__block">
                   <div class="form-group">
                       <h2 class="popup__title">Наши менеджеры уже готовы помочь с интересующими вопросами</h2>
@@ -688,13 +949,28 @@
                   <img class="form__arrow" loading="lazy" src="img/arrowSpiral.svg" alt="">
                   <picture><source srcset="img/OBJECTS.webp" type="image/webp"><img class="form__photo" loading="lazy" src="img/OBJECTS.png" alt=""></picture>
               </div>
-              <button class="form__button btn btn-light btn-popup" type="submit">
+              <button class="form__button btn btn-light btn-popup" type="submit" id="submitMessage">
                   <img id="animated-icon" loading="lazy" src="img/offer_phone.svg" alt="" class="shake">
               </button>
             </form>
+            
           </div>
     </div>
   </div>
+
+
+
+  <div class="popup-container" id="popupThanks" >
+        <div class="popup thanks">
+            <span class="close-btn light" id="closePopupThanks"></span>
+            <div class="popup__thanks">
+                <h2>Спасибо</h2>
+                <p>В ближайшее время наши менеджеры свяжутся с вами и позаботятся о том чтобы ответить на все вопросы!</p>
+            </div>
+          </div>
+  </div>
+
+
 
 
 
@@ -768,11 +1044,11 @@
             }         
             isWebp();      
     </script>
-    <script src="js/wow.min.js?_v=20240217172638"></script>
+    <script src="js/wow.min.js?_v=20240222141609"></script>
     <script defer>
     new WOW().init();
     </script>
-    <script src="js/app.min.js?_v=20240217172638"></script>
+    <script src="js/app.min.js?_v=20240222141609"></script>
 </body>
 
 </html>

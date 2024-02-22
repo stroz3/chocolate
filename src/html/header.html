@@ -24,17 +24,30 @@
         </div>
     </div>
 </header>
+
+<style>
+     #videoHeader .splide__slide {
+    position: relative;
+ }
+ #videoHeader .splide__video__wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ }
+</style>
 <div class="video">
     <div id="videoHeader" class="splide">
         <div class="splide__track">
           <ul class="splide__list">
-            <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=nv7FUbJQkjg">
+            <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=nv7FUbJQkjg?vq=hd1080">
               <img loading="eager"  src="img/VideoScreen.png">
             </li>
-            <li class="splide__slide"  data-splide-youtube="https://www.youtube.com/watch?v=szeDvSf-9mI">
+            <li class="splide__slide"  data-splide-youtube="https://www.youtube.com/watch?v=szeDvSf-9mI?vq=hd1080">
               <img loading="lazy" src="img/second.png">
             </li>
-            <li class="splide__slide"  data-splide-youtube="https://www.youtube.com/watch?v=m1aN795gTjg">
+            <li class="splide__slide"  data-splide-youtube="https://www.youtube.com/watch?v=m1aN795gTjg?vq=hd1080">
               <img loading="lazy" src="img/third.png">
             </li>
           </ul>
@@ -59,3 +72,5 @@
         </div>
     </div>
 </div>
+
+
